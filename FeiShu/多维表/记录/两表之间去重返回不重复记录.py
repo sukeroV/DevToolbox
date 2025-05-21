@@ -142,8 +142,6 @@ def compare_and_filter_lists(list1: list, list2: list) -> list:
     for item in list1:
         fields = item.get('fields', {})
         key = _extract_key_fields(item)
-        # with open("t.txt", "a+", encoding="utf-8") as f:
-        #     f.write(str(key) + "\n")
 
         if key not in set2_keys:
             sales_people, sales_group_value = _process_sales_info(fields)
